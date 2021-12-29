@@ -91,7 +91,7 @@ class DatasetExtractor:
 
 
 folder_path = os.path.dirname(os.path.realpath(__file__))
-csv_file_path = f'{folder_path}/genres.csv'
+csv_file_path = f'{folder_path}/artists.csv'
 
 dataset_extractor = DatasetExtractor(folder_path, csv_file_path)
 dataset_extractor.split_dataset(0.7, 0.15, 0.15)
