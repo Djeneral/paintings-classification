@@ -10,7 +10,7 @@ In order to create a database that the neural network would understand, it is ne
 
 ### DatasetExtractor
 Input arguments:
-Image folder and database destriptor in csv file for class constructor. Train ratio, validation ratio and test ratio for split dataset function. \\
+Image folder and database destriptor in csv file for class constructor. Train ratio, validation ratio and test ratio for split dataset function.  **Enter**
 Example:
 ```
 dataset_extractor = DatasetExtractor(images_folder_path, csv_file_path)
@@ -21,19 +21,19 @@ dataset_extractor.split_dataset(train_ratio = 0.7, val_ratio = 0.15, test_ratio 
 For the classifier, pre-trained convolutional networks are used, which are adapted for classification into 11 and 21 classes, respectively. The networsk was trained in MatLab Deep Learning Toolbox.
 
 ### GoogleNet
-GoogleNet architecture and training setting are implemented in config_googleNet.m file. The number of classes and the validation set are passed as function parameters. \\
+GoogleNet architecture and training setting are implemented in config_googleNet.m file. The number of classes and the validation set are passed as function parameters.  **Enter**
 Example:
 ```
 [lgraph, options] = config_googleNet(number_of_classes, validation_imds);
 ```
 
 ### ResNet50
-ResNet90 architecture and training setting are implemented in config_resnet50.m file. The number of classes and the validation set are passed as function parameters. \\
+ResNet90 architecture and training setting are implemented in config_resnet50.m file. The number of classes and the validation set are passed as function parameters.  **Enter**
 Example:
 ```
 [lgraph, options] = config_resnet50(number_of_classes, validation_imds);
 ```
 
 ## Results
-Results for GoogleNet you can see [here](https://drive.google.com/drive/folders/1DnWrwS7fTQPFDJ3YzBPYe82oTdysp-Y1?usp=sharing). \\
-Results for ResNet50 you can see [here](https://drive.google.com/drive/folders/1MA3GT-hBS6X_8dl0Wb39DeMGDJF3qyvx?usp=sharing). \\
+Results for GoogleNet you can see [here](https://drive.google.com/drive/folders/1DnWrwS7fTQPFDJ3YzBPYe82oTdysp-Y1?usp=sharing).  **Enter**
+Results for ResNet50 you can see [here](https://drive.google.com/drive/folders/1MA3GT-hBS6X_8dl0Wb39DeMGDJF3qyvx?usp=sharing).  **Enter**
