@@ -3,7 +3,7 @@ train_imds = imageDatastore('dataset_11/train', 'IncludeSubfolders', true, 'Labe
 val_imds = imageDatastore('dataset_11/validation', 'IncludeSubfolders', true, 'LabelSource', 'foldernames');
 test_imds = imageDatastore('dataset_11/test', 'IncludeSubfolders', true, 'LabelSource', 'foldernames');
 %% Create network and options
-lgraph, options = get_googleNet(11);
+[lgraph, options] = config_googleNet(11, val_imds);
 analyzeNetwork(lgraph);
 %% Train network
 net = trainNetwork(train_imds, lgraph, options);

@@ -1,4 +1,4 @@
-function [lgraph, options] = config_resnet50(number_of_classes)
+function [lgraph, options] = config_resnet50(number_of_classes, val_imds)
     pretrained_model = resnet50;
 
     lgraph = layerGraph(pretrained_model);

@@ -1,4 +1,4 @@
-function [lgraph, options] = config_googleNet(number_of_classes)
+function [lgraph, options] = config_googleNet(number_of_classes, val_imds)
     pretrained_model = googlenet;
 
     lgraph = layerGraph(pretrained_model);
