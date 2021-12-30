@@ -7,26 +7,12 @@ options = trainingOptions('adam', ...
     'MaxEpochs', 20, ...
     'MiniBatchSize', 16, ...
     'ValidationData', val_imds, ...
-    'ValidationFrequency', 331, ...
-    'ValidationPatience', 5, ...
+    'ValidationFrequency', 100, ...
+    'ValidationPatience', 100, ...
     'Shuffle', 'every-epoch', ...
     'Plots', 'training-progress');
 %% Create network
-pretrained_model = resnet50;
-
-lgraph = layerGraph(pretrained_model);
-lgraph = removeLayers(lgraph,{'fc1000_softmax', 'ClassificationLayer_fc1000'});
-
-new_layers = [
-    fullyConnectedLayer(11, 'Name', 'FC11')
-    softmaxLayer('Name','SoftMax')
-    
-    classificationLayer('Name','class')
-    ];
-
-lgraph = addLayers(lgraph, new_layers);
-lgraph = connectLayers(lgraph, 'fc1000', 'FC11');
-
+lgraph = get_googleNet(11);
 analyzeNetwork(lgraph);
 %% Train network
 net = trainNetwork(train_imds, lgraph, options);
