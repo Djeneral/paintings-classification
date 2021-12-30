@@ -9,8 +9,10 @@ The artists.csv file (from original dataset) contains several genres for some ar
 In order to create a database that the neural network would understand, it is necessary to divide the data into training, test and validation. The division into subsets is implemented using the DatasetExtractor class in the DatasetExtractor.py class.
 
 ### DatasetExtractor
+Input arguments:
+Image folder and database destriptor in csv file for class constructor. Train ratio, validation ratio and test ratio for split dataset function.
 Example:
 ```
 dataset_extractor = DatasetExtractor(images_folder_path, csv_file_path)
 dataset_extractor.split_dataset(train_ratio = 0.7, val_ratio = 0.15, test_ratio = 0.15)
-```python
+```
