@@ -1,5 +1,4 @@
-genres.csv
-artists.csv
+*.csv
 archive.zip
 resized
 images
