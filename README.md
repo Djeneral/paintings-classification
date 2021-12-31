@@ -42,3 +42,8 @@ Results for GoogleNet you can see [here](https://drive.google.com/drive/folders/
 
 Results for ResNet50 you can see [here](https://drive.google.com/drive/folders/1MA3GT-hBS6X_8dl0Wb39DeMGDJF3qyvx?usp=sharing).
 
+|Network  |11 classes                  |21 classes                  |
+|---------|----------|----------|------|----------|----------|------|
+|         |Train     |Validation|Test  |Train     |Validation|Test  |
+|GoogleNet|50%       |50%       |50%   |50%       |50%       |50%   |
+|ResNet50 |50%       |50%       |50%   |50%       |50%       |50%   |
