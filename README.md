@@ -30,7 +30,7 @@ Example:
 ```
 
 ### ResNet50
-ResNet90 architecture and training setting are implemented in config_resnet50.m file. The number of classes and the validation set are passed as function parameters.  
+ResNet50 architecture and training setting are implemented in config_resnet50.m file. The number of classes and the validation set are passed as function parameters.  
 
 Example:
 ```
@@ -38,19 +38,11 @@ Example:
 ```
 
 ### ResNet101
-ResNet90 architecture and training setting are implemented in config_resnet101.m file. The number of classes and the validation set are passed as function parameters.  
+ResNet101 architecture and training setting are implemented in config_resnet101.m file. The number of classes and the validation set are passed as function parameters.  
 
 Example:
 ```
 [lgraph, options] = config_resnet101(number_of_classes, validation_imds);
-```
-
-### DenseNet201
-ResNet90 architecture and training setting are implemented in config_densenet201.m file. The number of classes and the validation set are passed as function parameters.  
-
-Example:
-```
-[lgraph, options] = config_densenet201(number_of_classes, validation_imds);
 ```
 
 ## Results
@@ -60,12 +52,10 @@ Results for ResNet50 you can see [here](https://drive.google.com/drive/folders/1
 
 Results for ResNet101 you can see [here](https://drive.google.com/drive/folders/1-HS6x6vj2O_3BqYOQz-ZQNCnMjtqRGSx?usp=sharing).
 
-Results for DenseNet201 you can see [here](https://drive.google.com/drive/folders/1xoEF8EdkVa63u05bvvNCUphz_nPY_s7S?usp=sharing).
 
 |                    |            | 11 classes |      |            | 21 classes |      |
 |:------------------:|:----------:|:----------:|:----:|:----------:|:----------:|:----:|
 |**Network**         | Train      | Validation | Test | Train      | Validation | Test |
-| GoogleNet          | 80.3%      | 41.8%      | 40.7%| 80.6%      | 33.7%      | 32.5%|
+| GoogleNet!         | 78.0%      | 53.8%      | 51.1%| 81.6%      | 42.0%      | 41.0%|
 | ResNet50           | 95.6%      | 60.5%      | 59.6%| 92.8%      | 55.0%      | 52.2%|
-| ResNet101          | ??.?%      | ??.?%      | ??.?%| ??.?%      | ??.?%      | ??.?%|
-| DenseNet201        | ??.?%      | ??.?%      | ??.?%| ??.?%      | ??.?%      | ??.?%|
+| ResNet101          | 83.5%      | 53.1%      | 47.2%| ??.?%      | ??.?%      | ??.?%|
