@@ -19,7 +19,15 @@ dataset_extractor.split_dataset(train_ratio = 0.7, val_ratio = 0.15, test_ratio 
 ```
 
 ## Neural network models
-For the classifier, pre-trained convolutional networks are used, which are adapted for classification into 11 and 21 classes, respectively. The networsk was trained in MatLab Deep Learning Toolbox. Neural networks vgg16, vgg19, squeezenet and resnet18 are not used because they are less complex than the GoogleNet network which has shown significantly worse results. More complex architectures were not used due to the hardware configuration of the available device
+For the classifier, pre-trained convolutional networks are used, which are adapted for classification into 11 and 21 classes, respectively. The networsk was trained in MatLab Deep Learning Toolbox. Four neural networks were used for training. Two networks of less complexity (VGG19 and GoogleNet) and two networks of greater complexity (ResNet50 and ResNet101). Neural networks vgg16, squeezenet and resnet18 are not used because they are less complex than the GoogleNet network which has shown significantly worse results. More complex architectures were not used due to the hardware configuration of the available device. Also, if we use larger architectures, we increase the possibility of fast overfitting because we have to small training set compared to the network architecture complexity.
+
+### VGG19
+VGG19 architecture and training setting are implemented in config_vgg19.m file. The number of classes and the validation set are passed as function parameters. 
+
+Example:
+```
+[lgraph, options] = config_vgg19(number_of_classes, validation_imds);
+```
 
 ### GoogleNet
 GoogleNet architecture and training setting are implemented in config_googleNet.m file. The number of classes and the validation set are passed as function parameters. 
@@ -46,16 +54,18 @@ Example:
 ```
 
 ## Results
+Results for VGG19 you can see [here](https://drive.google.com/drive/folders/1xoEF8EdkVa63u05bvvNCUphz_nPY_s7S?usp=sharing).
+
 Results for GoogleNet you can see [here](https://drive.google.com/drive/folders/1DnWrwS7fTQPFDJ3YzBPYe82oTdysp-Y1?usp=sharing).
 
 Results for ResNet50 you can see [here](https://drive.google.com/drive/folders/1MA3GT-hBS6X_8dl0Wb39DeMGDJF3qyvx?usp=sharing).
 
 Results for ResNet101 you can see [here](https://drive.google.com/drive/folders/1-HS6x6vj2O_3BqYOQz-ZQNCnMjtqRGSx?usp=sharing).
 
-
 |                    |            | 11 classes |      |            | 21 classes |      |
 |:------------------:|:----------:|:----------:|:----:|:----------:|:----------:|:----:|
 |**Network**         | Train      | Validation | Test | Train      | Validation | Test |
-| GoogleNet!         | 78.0%      | 53.8%      | 51.1%| 81.6%      | 42.0%      | 41.0%|
+| VGG19              | ??.?%      | ??.?%      | ??.?%| ??.?%      | ??.?%      | ??.?%|
+| GoogleNet          | 78.0%      | 53.8%      | 51.1%| 77.4%      | 48.5%      | 46.9%|
 | ResNet50           | 95.6%      | 60.5%      | 59.6%| 92.8%      | 55.0%      | 52.2%|
 | ResNet101          | 83.5%      | 53.1%      | 47.2%| ??.?%      | ??.?%      | ??.?%|
