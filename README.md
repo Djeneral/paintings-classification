@@ -53,7 +53,7 @@ Example:
 [lgraph, options] = config_densenet201(number_of_classes, validation_imds);
 ```
 
-## Results
+## Neural Networks Results
 Results for GoogleNet you can see [here](https://drive.google.com/drive/folders/1DnWrwS7fTQPFDJ3YzBPYe82oTdysp-Y1?usp=sharing).
 
 Results for ResNet50 you can see [here](https://drive.google.com/drive/folders/1MA3GT-hBS6X_8dl0Wb39DeMGDJF3qyvx?usp=sharing).
@@ -67,5 +67,14 @@ Results for DenseNet201 you can see [here](https://drive.google.com/drive/folder
 |**Network**         | Train      | Validation | Test | Train      | Validation | Test |
 | GoogleNet          | 78.0%      | 53.8%      | 51.1%| 77.4%      | 48.5%      | 46.9%|
 | ResNet50           | 95.6%      | 60.5%      | 59.6%| 92.8%      | 55.0%      | 52.2%|
-| ResNet101          | 83.5%      | 53.1%      | 47.2%| ??.?%      | ??.?%      | ??.?%|
-| DenseNet201        | 91.5%      | 69.3%      | 67.9%| 92.1%      | 63.2%      | 56.4%|
+| ResNet101          | 83.5%      | 53.1%      | 47.2%| 76.0%      | 51.1%      | 47.5%|
+| DenseNet201        | 91.5%      | 69.3%      | 67.9%| 92.1%      | 66.4%      | 63.2%|
+
+## Combine networks
+Script combine.m keeps the outputs of all networks in csv file. Claas Combine Network combines the results of all networks. The score of each response is proportional to the conditional probability ($P(class_{detect} = class_{correct}|class_{detect}$) obtained from the validation.
+
+## Results with combined networks
+For 11 classes accuracy is: 68.5%.
+For 22 classes accuracy is: 64.3%.
+
+It was concluded that the combination of networks did not give the desired effect.
