@@ -3,7 +3,7 @@ train_imds = imageDatastore('dataset_22/train', 'IncludeSubfolders', true, 'Labe
 val_imds = imageDatastore('dataset_22/validation', 'IncludeSubfolders', true, 'LabelSource', 'foldernames');
 test_imds = imageDatastore('dataset_22/test', 'IncludeSubfolders', true, 'LabelSource', 'foldernames');
 %% Create network and options
-[lgraph, options] = config_densenet201(21, val_imds);
+[lgraph, options] = config_resnet101(21, val_imds);
 analyzeNetwork(lgraph);
 %% Train network
 net = trainNetwork(train_imds, lgraph, options);
