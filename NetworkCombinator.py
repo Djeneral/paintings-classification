@@ -14,10 +14,10 @@ class NetworkCombinator:
         self._turn_on_resNet101 = 1
         self._turn_on_denseNet201 = 1
 
-        self._googleNet_acc = 0.511
-        self._resNet50_acc = 0.596
-        self._resNet101_acc = 0.472
-        self._denseNet201_acc = 0.679
+        self._googleNet_acc = 1
+        self._resNet50_acc = 1
+        self._resNet101_acc = 1
+        self._denseNet201_acc = 1
         
         self._netout_csv_file_path = netout_csv_file_path
 
@@ -61,6 +61,12 @@ class NetworkCombinator:
         self._turn_on_resNet101 = include_resNet101
         self._turn_on_denseNet201 = include_denseNet201
 
+    def set_networks_accuracy(self, googleNet_acc, resNet50_acc, resNet101_acc, denseNet201_acc):
+        self._googleNet_acc = googleNet_acc
+        self._resNet50_acc = resNet50_acc
+        self._resNet101_acc = resNet101_acc
+        self._denseNet201_acc = denseNet201_acc
+
 
     def combine_networks(self):
         correct_class = []
@@ -92,11 +98,12 @@ class NetworkCombinator:
 
 
 folder_path = os.path.dirname(os.path.realpath(__file__))
-result_csv_file_path = f'{folder_path}/results_11.csv'
-net_out_csv_file_path = f'{folder_path}/11 classes validation.csv'
+result_csv_file_path = f'{folder_path}/results_21.csv'
+net_out_csv_file_path = f'{folder_path}/21 classes validation.csv'
 
 net = NetworkCombinator(result_csv_file_path, net_out_csv_file_path)
-net.select_networks(1, 1, 0, 1)
+net.select_networks(1,1,0,1)
+net.set_networks_accuracy(0.485, 0.55, 0.511, 0.664)
 net.read_data()
 cf, acc = net.combine_networks()
 

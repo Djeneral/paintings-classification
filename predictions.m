@@ -1,4 +1,4 @@
-number_of_classes = 22;
+number_of_classes = 21;
 
 if number_of_classes == 11
     train_imds = imageDatastore('dataset_11/train', 'IncludeSubfolders', true, 'LabelSource', 'foldernames');
@@ -32,6 +32,6 @@ else
     results = [results classify(net,test_imds)];
     net = load('results/DenseNet201/21 classes/net.mat').net;
     results = [results classify(net,test_imds)];
-    writematrix(results','21 classes validation.csv')
+    writematrix(results,'21 classes validation.csv')
     
 end
