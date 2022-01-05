@@ -67,8 +67,8 @@ Results for DenseNet201 you can see [here](https://drive.google.com/drive/folder
 |**Network**         | Train      | Validation | Test | Train      | Validation | Test |
 | GoogleNet          | 78.0%      | 53.8%      | 51.1%| 77.4%      | 48.5%      | 46.9%|
 | ResNet50           | 95.6%      | 60.5%      | 59.6%| 92.8%      | 55.0%      | 52.2%|
-| ResNet101          | 83.5%      | 53.1%      | 47.2%| 76.0%      | 51.1%      | 47.5%|
-| DenseNet201        | 91.5%      | 69.3%      | 67.9%| 92.1%      | 66.4%      | 63.2%|
+| ResNet101          | 83.5%      | 53.1%      | 47.2%| 76.6%      | 49.7%      | 49.2%|
+| DenseNet201        | 92.8%      | 68.5%      | 68.3%| 92.1%      | 66.4%      | 63.2%|
 
 ## Combine networks
 Script combine.m keeps the outputs of all networks in csv file. Claas Combine Network combines the results of all networks. The score of each response is proportional to the conditional probability ($P(class_{detect} = class_{correct}|class_{detect}$) obtained from the validation.

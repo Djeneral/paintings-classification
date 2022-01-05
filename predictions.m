@@ -1,13 +1,13 @@
-number_of_classes = 21;
+number_of_classes = 22;
 
 if number_of_classes == 11
     train_imds = imageDatastore('dataset_11/train', 'IncludeSubfolders', true, 'LabelSource', 'foldernames');
     val_imds = imageDatastore('dataset_11/validation', 'IncludeSubfolders', true, 'LabelSource', 'foldernames');
     test_imds = imageDatastore('dataset_11/test', 'IncludeSubfolders', true, 'LabelSource', 'foldernames');
 else
-    train_imds = imageDatastore('dataset_11/train', 'IncludeSubfolders', true, 'LabelSource', 'foldernames');
-    val_imds = imageDatastore('dataset_11/validation', 'IncludeSubfolders', true, 'LabelSource', 'foldernames');
-    test_imds = imageDatastore('dataset_11/test', 'IncludeSubfolders', true, 'LabelSource', 'foldernames');
+    train_imds = imageDatastore('dataset_22/train', 'IncludeSubfolders', true, 'LabelSource', 'foldernames');
+    val_imds = imageDatastore('dataset_22/validation', 'IncludeSubfolders', true, 'LabelSource', 'foldernames');
+    test_imds = imageDatastore('dataset_22/test', 'IncludeSubfolders', true, 'LabelSource', 'foldernames');
 end
 
 if number_of_classes == 11

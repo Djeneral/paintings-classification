@@ -102,8 +102,8 @@ result_csv_file_path = f'{folder_path}/results_21.csv'
 net_out_csv_file_path = f'{folder_path}/21 classes validation.csv'
 
 net = NetworkCombinator(result_csv_file_path, net_out_csv_file_path)
-net.select_networks(1,1,0,1)
-net.set_networks_accuracy(0.485, 0.55, 0.511, 0.664)
+net.select_networks(1,1,1,1)
+net.set_networks_accuracy(0.485, 0.55, 0.497, 0.664)
 net.read_data()
 cf, acc = net.combine_networks()
 
