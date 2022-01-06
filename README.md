@@ -76,6 +76,10 @@ Script combine.m keeps the outputs of all networks in csv file. Claas Combine Ne
 ## Results with combined networks
 For 11 classes accuracy is: 68.5%.
 
-For 22 classes accuracy is: 66.7%.
+For 22 classes accuracy is: 63.7%.
 
 It was concluded that the combination of networks did not give the desired effect.
+
+## Report
+
+Project report on Serbian you can see [here](https://drive.google.com/file/d/1luvVTXOcl3hwa-Q6eoRkJNmYep_1hHhv/view?usp=sharing).
